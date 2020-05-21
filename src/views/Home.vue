@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <index />
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import index from '@/components/index.vue'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/css/bootstrap-theme.min.css'
+import 'bootstrap/dist/fonts/glyphicons-halflings-regular.ttf'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    index
   }
 }
 </script>
