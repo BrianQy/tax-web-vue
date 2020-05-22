@@ -12,19 +12,19 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+          <router-link to="/" class="nav-link" >首页 <span class="sr-only">(current)</span></router-link>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#">计算</a>
+          <router-link to="/calculate" class="nav-link" >计算</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#"  >关于我们</a>
+          <router-link to="/about" class="nav-link "  >关于我们</router-link>
         </li>
       </ul>
       <!-- <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">注册</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">登陆</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" @click="addRoutes1"  >注册</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" @click="addRoutes2">登陆</button>
       <!-- </form> -->
     </div>
        </div>
@@ -38,6 +38,17 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap-theme.min.css'
 import 'bootstrap/dist/fonts/glyphicons-halflings-regular.ttf'
 export default {
+  name:'Header',
+  components:[],
+  methods:{
+    addRoutes1 () {
+      this.$router.push('/login')
+    },
+    addRoutes2 () {
+      this.$router.push('./register')
+    }
+
+  }
     
 }
 </script>
